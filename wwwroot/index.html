@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WebApi Calculator</title>
+    <script type="text/javascript" src="/js/webApiCalculator.js"></script>
+</head>
+<body>
+    <form action="javascript:void(0);" method="POST">
+        <label for="add-num1">
+            <span>Number one</span>
+
+            <input type="text" id="add-num1" required/>
+
+            <ul>
+                <li>Must only contain numbers</li>
+            </ul>
+        </label>
+        <p>
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </p>
+        <label for="add-num2">
+            <span>Number two</span>
+
+            <input type="text" id="add-num2" required/>
+
+            <ul>
+                <li>Must only contain numbers</li>
+            </ul>
+        </label>
+        <input type="submit" value="Calculate"  onclick="calculate()"/>
+    </form>
+</body>
+</html>
