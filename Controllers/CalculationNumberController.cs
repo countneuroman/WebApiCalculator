@@ -12,22 +12,23 @@ namespace WebApiCalculator.Controllers
         public IActionResult  PostCalculationNumber(CalculationNumber calculationNumber)
         {
             int result;
+
             switch (calculationNumber.Operation)
             {
-                case "+":
+                case "addition":
                     result = calculationNumber.Num1 + calculationNumber.Num2;
                     break;
-                case "-":
+                case "subtraction":
                     result = calculationNumber.Num1 - calculationNumber.Num2;
                     break;
-                case "*":
+                case "multiplication":
                     result = calculationNumber.Num1 * calculationNumber.Num2;
                     break;
-                case "/":
+                case "division":
                     result = calculationNumber.Num1 / calculationNumber.Num2;
                     break;
                 default:
-                    return NotFound();
+                    return Json("Operation not found!");
             }
             return Json(result);
         }

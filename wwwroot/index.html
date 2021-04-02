@@ -3,37 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <title>WebApi Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="/js/webApiCalculator.js"></script>
 </head>
 <body>
-    <form action="javascript:void(0);" method="POST">
-        <label for="add-num1">
-            <span>Number one</span>
+    <div class="container">
+        <form class="calculation" action="javascript:void(0);" method="POST">
+            <label for="add-num1">
+                <span>Number one</span>
 
-            <input type="text" id="add-num1" required/>
+                <input type="text" id="add-num1" required />
 
-            <ul>
-                <li>Must only contain numbers</li>
-            </ul>
-        </label>
-        <p>
-            <select id="operation">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
-                <option value="/">/</option>
-            </select>
-        </p>
-        <label for="add-num2">
-            <span>Number two</span>
+                <ul>
+                    <li>Must only contain numbers</li>
+                </ul>
+            </label>
+            <p>
+                <select id="operation">
+                    <option value="addition">+</option>
+                    <option value="subtraction">-</option>
+                    <option value="multiplication">*</option>
+                    <option value="division">/</option>
+                </select>
+            </p>
+            <label for="add-num2">
+                <span>Number two</span>
 
-            <input type="text" id="add-num2" required/>
+                <input type="text" id="add-num2" required />
 
-            <ul>
-                <li>Must only contain numbers</li>
-            </ul>
-        </label>
-        <input type="submit" value="Calculate"  onclick="calculate()"/>
-    </form>
+                <ul>
+                    <li>Must only contain numbers</li>
+                </ul>
+            </label>
+            <input type="submit" value="Calculate" onclick="calculate()" />
+        </form>
+    </div>
 </body>
 </html>
